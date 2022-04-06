@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EmployeDetails</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="country_performance">%s Performance</string>
+    <string name="zone">Zone</string>
+    <string name="uganda_performance">Uganda Performance</string>
+    <string name="area">Area</string>
+</resources>

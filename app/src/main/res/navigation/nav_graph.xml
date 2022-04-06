@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/performanceByZoneFragment">
+
+    <fragment
+        android:id="@+id/performanceByZoneFragment"
+        android:name="com.sumit.employedetails.ui.perfomancebyzone.PerformanceByZoneFragment"
+        android:label="PerformanceByZoneFragment">
+        <action
+            android:id="@+id/action_performanceByZoneFragment_to_countryPerRomanceFragment"
+            app:destination="@id/countryPerRomanceFragment">
+            <argument
+                android:name="performance"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/countryPerRomanceFragment"
+        android:name="com.sumit.employedetails.ui.countryPerfomance.CountryPerRomanceFragment"
+        android:label="fragment_country_per_fomance"
+        tools:layout="@layout/fragment_country_per_fomance">
+
+        <argument
+            android:name="performance"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_countryPerRomanceFragment_to_areaFragment"
+            app:destination="@id/areaFragment">
+            <argument
+                android:name="performance"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/areaFragment"
+        android:name="com.sumit.employedetails.ui.areaPerfomance.SalesAreaFragment"
+        android:label="fragment_area"
+        tools:layout="@layout/fragment_area">
+        <argument
+            android:name="performance"
+            app:argType="string" />
+    </fragment>
+</navigation>
